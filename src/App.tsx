@@ -1,9 +1,10 @@
 import "./App.css";
 import Social from "./social-link/social";
 function App() {
+  const names = ["Github", "Front-end Mentor","LinkedIn","twitter","instagram"];
   return (
     <div className="app">
-      <Social />  
+      <Social names={names} />  
     </div>
   );
 }

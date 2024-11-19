@@ -1,6 +1,9 @@
 import image from "../assets/avatar-jessica.jpeg";
 import styles from "./social.module.css";
-export const Social = () => {
+interface Props {
+  names: String[];
+}
+function Social({ names }: Props) {
   return (
     <>
       <div className={styles.container}>
@@ -16,8 +19,13 @@ export const Social = () => {
           <h5 className={styles.locationText}>London, United Kingdom</h5>
           <p>"Front-end developer and avid reader."</p>
         </div>
+        <div className={styles.buttonContainer}>
+          {names.map((name) => (
+            <button className={styles.button}>{name}</button>
+          ))}
+        </div>
       </div>
     </>
   );
-};
+}
 export default Social;
